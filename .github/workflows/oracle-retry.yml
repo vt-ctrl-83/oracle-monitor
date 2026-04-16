@@ -5,6 +5,9 @@ on:
     - cron: '*/30 * * * *'  # Elke 30 minuten
   workflow_dispatch:      # Ook manueel te starten
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   create-instance:
     runs-on: ubuntu-latest
