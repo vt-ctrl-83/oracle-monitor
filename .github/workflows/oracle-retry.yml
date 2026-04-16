@@ -3,6 +3,8 @@ name: Oracle ARM Instance Creator
 on:
   schedule:
     - cron: '*/30 * * * *'  # Elke 30 minuten
+     workflow_dispatch:      # Ook manueel te starten
+
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
