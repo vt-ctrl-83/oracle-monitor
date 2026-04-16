@@ -22,8 +22,8 @@ AVAILABILITY_DOMAINS = [
 
 # Instance config
 SHAPE = "VM.Standard.A1.Flex"
-OCPUS = 2
-MEMORY_GB = 12
+OCPUS = 4
+MEMORY_GB = 24
 # Ubuntu 22.04 ARM image in Frankfurt (update if needed)
 IMAGE_ID = "ocid1.image.oc1.eu-frankfurt-1.aaaaaaaav2pwhgbnbqcke5qylrfaijbbfbmj3hy7rxl6qzr5bdl3f7rliqwq"
 
