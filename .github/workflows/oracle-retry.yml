@@ -2,8 +2,8 @@ name: Oracle ARM Instance Creator
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # Elke 30 minuten
-  workflow_dispatch:      # Ook manueel te starten
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -34,3 +34,9 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python create_instance.py
+
+      - name: Zelf opnieuw triggeren
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run oracle-retry.yml --repo ${{ github.repository }} --ref main
