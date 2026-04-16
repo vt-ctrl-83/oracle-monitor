@@ -34,10 +34,3 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python create_instance.py
-
-      - name: Zelf opnieuw triggeren over 30 minuten
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          sleep 1800
-          gh workflow run oracle-retry.yml --repo ${{ github.repository }}
