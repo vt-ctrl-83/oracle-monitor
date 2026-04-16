@@ -105,7 +105,7 @@ def try_create_instance(compute_client, compartment_id, availability_domain):
         ),
         display_name="arm-instance-auto",
         metadata={
-            "user_data": ""
+            "ssh_authorized_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC791FKuowDyvI6PeJh5yU9UEcbeohEMbvuBoE2JBUZnNaaB1TTgm9d33UmGaBhnWwBfd59QMNYCffN/fFw/U6xgZmlFpQXWY1L6MEa2uWFVulQCRtXsXiKaGTz5e8YY7tdsYsDKHfy4GgN2xJYnUsmOf3tmD1/M8NASE/dEHmn8bInX4XewpWOzhdLgSfPF/wvhQr3nBV0qB58eJhOfBNAlAYdmBwUH0S1ShS6z6UgXocmuNXUXPeLe9jAsAFX7PAU1N8ZRsICftlIeiOLbP4h/nRw950vXaePO5lx3RLmz/t+eGya2+SAJPbBXzc4GE1iHl2CY3plPwzJWmPS8PLz ssh-key-2026-04-16"
         }
     )
     
